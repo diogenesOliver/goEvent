@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:8080/v1
+
+POST {{baseUrl}}/events
+Content-Type: application/json
+
+{
+    "title": "My graduation",
+    "description": "My college education",
+    "date": "2024-12-21",
+    "interval": 12
+}
