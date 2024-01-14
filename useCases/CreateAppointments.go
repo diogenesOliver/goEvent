@@ -8,11 +8,11 @@ import (
 )
 
 func (a *AppointmentController) CreateAppointments(ctx *gin.Context) {
-	appointment := entities.NewAppointment()
+	appointment := entities.Appointment{}
 	if err := ctx.BindJSON(&appointment); err != nil {
 		return
 	}
 
-	a.appointments = append(a.appointments, *appointment)
+	a.appointments = append(a.appointments, appointment)
 	ctx.JSON(http.StatusOK, a.appointments)
 }
