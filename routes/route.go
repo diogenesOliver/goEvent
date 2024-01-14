@@ -1,13 +1,16 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	controllers "github.com/goEvent/useCases"
+)
 
 func AppRoutes(r *gin.Engine) *gin.RouterGroup {
+	appointmentController := controllers.NewAppointment()
+
 	v1 := r.Group("/v1")
 	{
-		v1.GET("/events", func(ctx *gin.Context) {
-			ctx.JSON(200, "This is a simple event")
-		})
+		v1.POST("/events", appointmentController.CreateAppointments)
 	}
 	return v1
 }
