@@ -28,7 +28,7 @@ func CreateAppointments(ctx *gin.Context) {
 		WriterGorm: configs.GetWriterGorm(),
 	})
 
-	fmt.Println(appointment)
+	fmt.Println(repos)
 
 	err := repos.Appointment.Create(context.Background(), appointment)
 	if err != nil {
