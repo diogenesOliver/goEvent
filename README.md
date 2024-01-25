@@ -7,7 +7,7 @@
     "title": "My graduation",
     "description": "My college education",
     "date": "2024-12-21",
-    "interval": "12"
+    "interval": 12
 }
 ```
 
