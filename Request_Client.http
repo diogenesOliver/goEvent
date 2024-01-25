@@ -9,3 +9,6 @@ Content-Type: application/json
     "date": "2024-12-21",
     "interval": 12
 }
+
+###
+GET {{baseUrl}}/appointments
